@@ -77,7 +77,7 @@ export default function DashboardShell({
       {/* Sidebar Navigation */}
       <aside className={`fixed inset-y-0 left-0 z-40 w-64 bg-neutral-900 border-r border-neutral-800 flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
         sidebarOpen ? 'translate-x-0' : '-translate-x-64'
-      } lg:translate-x-0 lg:static lg:h-screen lg:z-10`}>
+      } lg:translate-x-0 lg:h-screen lg:z-10 overflow-y-auto`}>
         
         <div>
           {/* Sidebar Header Brand */}
@@ -158,7 +158,7 @@ export default function DashboardShell({
       </aside>
 
       {/* Main Workspace Frame */}
-      <main className="flex-1 min-h-screen flex flex-col z-10 transition-all duration-300 overflow-x-hidden">
+      <main className="flex-1 min-h-screen flex flex-col z-10 transition-all duration-300 overflow-x-hidden lg:pl-64">
         
         {/* Top Header Panel */}
         <header className="h-16 flex items-center justify-between px-6 lg:px-8 border-b border-neutral-900/60 bg-neutral-950/40 backdrop-blur-md sticky top-0 z-20">
@@ -216,7 +216,7 @@ export default function DashboardShell({
         </header>
 
         {/* Dynamic Inner Dashboard Page Render */}
-        <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl mx-auto w-full">
+        <div className="flex-1 p-6 lg:p-8 space-y-6 max-w-7xl mx-auto w-full pb-12 lg:pb-20">
           {children}
         </div>
 
